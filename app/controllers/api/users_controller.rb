@@ -5,9 +5,9 @@ class Api::UsersController < ApplicationController
     @user.password = params[:password]
     @user.password_confirmation = params[:password_confirmation]
     if @user.save
-      render status: 200, json: 'ok'
+      render status: 200, json: { status: 'ok' }
     else
-      render status: 400, json: 'error'
+      render status: 400, json: { status: 'error' }
     end
   end
 
