@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
   has_secure_password
-  validates_presence_of :email
   has_one :ApiKey
+
+  validates :email, presence: true
+  validates :email, uniqueness: true
+  
   
 end
 
