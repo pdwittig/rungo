@@ -9,5 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt'
+gem 'dotenv'
+gem 'httparty'
 
 
