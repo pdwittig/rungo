@@ -1,6 +1,6 @@
 namespace :seed do
 
-  desc 'Hit transit api, get all agencies and insert in db'
+  desc 'Get a list of all agencies and populte db'
   task populate_agency_data: :environment do
     api_client = TransitApiClient.new
     agencies = api_client.agencies
