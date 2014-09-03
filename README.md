@@ -15,5 +15,6 @@
 
 ######Future things to worry about
 - How am I going to geocode non muni stop data
+- Refactor directionality issue in method that fetches stops from api
 
 
