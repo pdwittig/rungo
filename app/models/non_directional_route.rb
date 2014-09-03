@@ -1,3 +1,4 @@
 class NonDirectionalRoute < Route
-  has_many :directionalRoutes
+  belongs_to :agency
+  has_many :directional_routes
 end

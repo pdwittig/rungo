@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140902222325) do
 
   create_table "routes", force: true do |t|
     t.string   "name"
-    t.integer  "code"
+    t.string   "code"
     t.string   "type"
     t.integer  "non_directional_route_id"
     t.datetime "created_at"
