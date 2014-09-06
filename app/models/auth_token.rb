@@ -1,4 +1,4 @@
-class ApiKey < ActiveRecord::Base
+class AuthToken < ActiveRecord::Base
   before_create :generate_access_token
   validates :access_token, uniqueness: true
 
