@@ -1,4 +1,5 @@
 class AuthToken < ActiveRecord::Base
+  belongs_to :user
   before_create :generate_access_token
   validates :access_token, uniqueness: true
 

@@ -1,7 +1,7 @@
 class Api::SettingsController < ApplicationController
   
   def index
-    @settings = User.find(params[:user_id]).setting
+    @settings = AuthToken.find_by_access_token(params[:auth_token]).user.setting
     render json: @settings
   end
 
