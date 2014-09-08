@@ -5,7 +5,13 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
   validates :email, uniqueness: true
-  
-  
+
+  before_save :create_empty_settings;
+
+  private
+  def create_empty_settings
+    self.create_setting
+  end
+
 end
 
