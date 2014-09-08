@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   validates :email, uniqueness: true
 
-  before_save :create_empty_settings;
+  after_create :create_empty_settings;
 
   private
   def create_empty_settings
