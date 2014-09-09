@@ -7,6 +7,9 @@ Rungo::Application.routes.draw do
     resources :non_directional_routes, controller: 'routes', 
       type: 'NonDirectionalRoutes', only: [:index]
 
+    resources :directional_routes, controller: 'routes', 
+      type: 'DirectionalRoutes', only: [:index]
+
     get 'settings/', to: 'settings#show'
     put 'settings/', to: 'settings#update'
   end
