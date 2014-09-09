@@ -13,12 +13,11 @@ class Api::RoutesController < ApplicationController
     p params
 
     if params[:type] == "NonDirectionalRoutes"
-      p "I am here"
       agency_id = Agency.find_by_name(params[:agency_name])
       route_class.where(agency_id: agency_id)
     elsif params[:type] == "DirectionalRoutes"
-      route_id = Route.name(params[:non_directional_route_name])
-      route_class.where(route_id: route_id)
+      route_id = Route.find_by_name(params[:non_directional_route_name])
+      route_class.where(non_directional_route_id: route_id)
     end
   end
 
